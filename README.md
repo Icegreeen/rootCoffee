@@ -3,9 +3,9 @@
 </h1>
 <p align="center">🚀 Coffee shop.</p>
 
-> Project status: Completed :heavy_check_mark: [Click here to view!](https://resplendent-liger-a99762.netlify.app/)
+> Project status: Completed :heavy_check_mark: [Click here to view!]()
 
-## ![bg(2)](https://user-images.githubusercontent.com/56550632/167311962-f801970e-f9e6-4987-bcb8-58fec7e5f60a.jpg)
+## ![bg(2)](https://user-images.githubusercontent.com/56550632/220329603-a90fbf0e-1f7f-4da7-ac9d-dea973d3572b.png)
 
 ## :fire: Iniciando a aplicação :fire:
 
@@ -21,20 +21,19 @@ _Para rodar a aplicação é necessário que você possua esses três programas:
 
 - [Styled-components](https://styled-components.com/)
 
-### :computer: Frontend do Poxedéx
+### :computer: Frontend:
 
 _Abra um terminal na pasta do projeto e digite:_
 
 Instalar dependências da aplicação:
 
 ```bash
-npm i
+npm i ou yarn 
 ```
 
 Iniciar aplicação
 
 ```bash
-yarn
 yarn start
 ```
 
