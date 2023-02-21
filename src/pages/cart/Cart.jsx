@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 import { ShopContext } from '../../context/shop-context';
 import { PRODUCTS } from '../../db/products';
 import { CartItem } from "./cart-item";
-import "./style.css";
 
-import { useNavigate } from "react-router-dom";
+import { CartT, Checkout, CartItemsT, Left, Right } from './style.js'
 
 export const Cart = () => {
 
@@ -14,27 +14,30 @@ export const Cart = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="cart">
-            <div>
-                <h1>Your cart Items</h1>
-            </div>
-            <div className="cartItems">
-                {PRODUCTS.map((product) => {
-                    if (cartItems[product.id] !== 0) {
-                        return <CartItem data={product} />
-                    }
-                })}
-            </div>
+        <CartT>
+                <Left>
+                    <CartItemsT>
+                        {PRODUCTS.map((product) => {
+                            if (cartItems[product.id] !== 0) {
+                                return <CartItem data={product} />
+                            }
+                        })}
+                    </CartItemsT>
+                </Left>
 
-                {totalAmount > 0 ? (
-                    <div className="checkout">
-                        <p> Subtotal: ${totalAmount}</p>
-                        <button onClick={() => navigate("/")} > Continue Shopping </button>
-                        <button> Checkout </button>
-                    </div>
-                ) : (
-                    <h1> Your Cart is Empty</h1>
-                )}
-        </div>
+                <Right>
+                    <h1>Mais alguma coisa!</h1>
+                    
+                    {totalAmount > 0 ? (
+                        <Checkout>
+                            <p> Subtotal: ${totalAmount}</p>
+                            <button onClick={() => navigate("/")} > Continue Shopping </button>
+                            <button> Checkout </button>
+                        </Checkout>
+                    ) : (
+                        <h1> Your Cart is Empty</h1>
+                    )}
+                </Right>
+        </CartT>
     );
 }

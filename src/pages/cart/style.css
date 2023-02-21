@@ -1,4 +1,5 @@
 .cart {
+    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,6 +7,7 @@
 }
 
 .cartItem {
+    background: antiquewhite;
     width: 700px;
     height: 250px;
     display: flex;
